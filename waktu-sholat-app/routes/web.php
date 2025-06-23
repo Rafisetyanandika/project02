@@ -22,3 +22,9 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+use App\Http\Controllers\PrayerTimeController;
+
+Route::get('/jadwal-shalat', [PrayerTimeController::class, 'index'])->name('jadwal.index');
+Route::post('/jadwal-shalat', [PrayerTimeController::class, 'getJadwal'])->name('jadwal.get');
+
