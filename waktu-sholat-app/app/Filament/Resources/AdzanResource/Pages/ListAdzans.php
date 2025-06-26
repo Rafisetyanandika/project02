@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\KotaResource\Pages;
+namespace App\Filament\Resources\AdzanResource\Pages;
 
-use App\Filament\Resources\KotaResource;
+use App\Filament\Resources\AdzanResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListKotas extends ListRecords
+class ListAdzans extends ListRecords
 {
-    protected static string $resource = KotaResource::class;
+    protected static string $resource = AdzanResource::class;
 
     protected function getHeaderActions(): array
     {

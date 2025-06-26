@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kota', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_kota');
-            $table->timestamps();
+        Schema::create('adzans', function (Blueprint $table) {
+            $table->id(); // ID auto increment
+            $table->string('nama'); // Nama adzan, contoh: Adzan Subuh
+            $table->string('audio_path'); // Path atau lokasi file audio mp3
+            $table->timestamps(); // created_at dan updated_at
         });
     }
 
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kota');
+        Schema::dropIfExists('adzans');
     }
 };

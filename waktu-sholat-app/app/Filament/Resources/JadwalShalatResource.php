@@ -28,25 +28,45 @@ class JadwalShalatResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('subuh')
+                Forms\Components\TimePicker::make('subuh')
                     ->label('🌅 Subuh')
-                    ->required(),
+                    ->required()
+                    ->seconds(false)
+                    ->displayFormat('H:i')
+                    ->hoursStep(1)
+                    ->minutesStep(1),
 
-                Forms\Components\TextInput::make('dzuhur')
+                Forms\Components\TimePicker::make('dzuhur')
                     ->label('🏞️ Dzuhur')
-                    ->required(),
+                    ->required()
+                    ->seconds(false)
+                    ->displayFormat('H:i')
+                    ->hoursStep(1)
+                    ->minutesStep(1),
 
-                Forms\Components\TextInput::make('ashar')
+                Forms\Components\TimePicker::make('ashar')
                     ->label('🌇 Ashar')
-                    ->required(),
+                    ->required()
+                    ->seconds(false)
+                    ->displayFormat('H:i')
+                    ->hoursStep(1)
+                    ->minutesStep(1),
 
-                Forms\Components\TextInput::make('maghrib')
+                Forms\Components\TimePicker::make('maghrib')
                     ->label('🌆 Maghrib')
-                    ->required(),
+                    ->required()
+                    ->seconds(false)
+                    ->displayFormat('H:i')
+                    ->hoursStep(1)
+                    ->minutesStep(1),
 
-                Forms\Components\TextInput::make('isya')
+                Forms\Components\TimePicker::make('isya')
                     ->label('🌃 Isya')
-                    ->required(),
+                    ->required()
+                    ->seconds(false)
+                    ->displayFormat('H:i')
+                    ->hoursStep(1)
+                    ->minutesStep(1),
             ]);
     }
 
